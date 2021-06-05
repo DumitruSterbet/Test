@@ -1,0 +1,26 @@
+﻿<div class="container rounded p-1 mt-3  " style="background-color:rgba(255,255,255,0.7)">
+    <div class="mt-5 p-3">
+
+        <div class=" bg-dark text-center p-2 m-3 mb-5 mt-5 rounded ">
+            <h1 class="text-white m-2 ">Lista cu state</h1>
+        </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-lg-2 bg-dark p-1 m-3 rounded text-center" ng-repeat="country in myData">
+
+                <h4 class="text-danger">Codul tarii  </h4>
+
+                <h4 class=" text-danger">{{country.CountryCode}}</h4>
+                <h5 class="text-white">Denumirea tarii</h5>
+                <h5 class="text-primary">{{country.FullName}}</h5>
+
+                <a ng-click="goToYear(country.CountryCode)" class="btn-danger rounded m-2 w-25 text-center float-right text-white">Cauta</a>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

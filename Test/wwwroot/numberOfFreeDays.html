@@ -1,0 +1,13 @@
+﻿
+    <div class="m-4 p-4 bg-dark rounded text-light font-weight-bold text-center " style="">
+        <h2 class="text-white">Formular</h2>
+        <h2 class="text-white">Nr. de zile libere</h2>
+        <h4 class="text-secondary text-center">Introdu anul</h4>
+        <h6 class="text-danger mb-3">Diapozan disponibil : 2014-30000</h6>
+        <h5>Anul: <input type="number" class="small border rounded" ng-model="Year"></h5>
+        <h2 class="text-center mb-1">Ai introdus:</h2>
+        <h3 class="text-warning text-center mb-2"> {{Year}}</h3>
+        <div class="text-center mt-4">
+            <a ng-click="requestCount(Year)" class="btn-danger rounded m-3 p-2 w-25 text-white">Cauta</a>
+        </div>
+    </div>

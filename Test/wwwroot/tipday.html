@@ -1,0 +1,17 @@
+﻿<div class="m-4 p-4 bg-dark rounded text-light font-weight-bold text-center " style="">
+    <h2 class="text-white">Formular</h2>
+    <h2 class="text-white">Tipul de zi</h2>
+    <h4 class="text-secondary text-center">Introdu data</h4>
+    <h6 class="text-danger mb-3">Diapozan disponibil : 2014-30000</h6>
+    <h5>Anul: <input type="number" class="small border rounded" ng-model="Year"></h5>
+
+    <h5>Luna : <input type="number" name="Month" class="small border rounded" ng-model="Month" ></h5>
+   
+
+    <h5>Ziua: <input type="number" class="small border rounded" ng-model="Day"></h5>
+    <h2 class="text-center mb-1">Ai introdus:</h2>
+    <h3 class="text-warning text-center mb-2"> {{Day}}  {{Month}}  {{Year}}</h3>
+    <div class="text-center mt-4">
+        <a ng-click="requestTypeDay(Year,Month,Day)" class="btn-danger rounded m-3 p-2 w-25 text-white">Cauta</a>
+    </div>
+</div>
