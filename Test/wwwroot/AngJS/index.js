@@ -1,6 +1,6 @@
 ﻿var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope, $http, $window) {
-    $http.get("https://testmediaparkapi.azurewebsites.net/api/country")
+    $http.get("https://test20210606203008.azurewebsites.net/api/country")
         .then(function (response) {
             $scope.myData = response.data;
         });
@@ -12,7 +12,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
     //functia de adaugat state in lista
     $scope.empty = false;
     $scope.addcountry = function () {
-        $scope.url = "https://testmediaparkapi.azurewebsites.net/api/country";
+        $scope.url = "https://test20210606203008.azurewebsites.net/api/country";
         $window.location.href = $scope.url;
     }
 
@@ -28,7 +28,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
     // functia pentru citirea anului introdus  si a face request catre BD
     $scope.request = function (year) {
         $scope.year = year;
-        $scope.url = "https://testmediaparkapi.azurewebsites.net/api/holiday/Year=" + $scope.year + "&Country=" + $scope.countr;
+        $scope.url = "https://test20210606203008.azurewebsites.net/api/holiday/Year=" + $scope.year + "&Country=" + $scope.countr;
         $window.location.href = $scope.url;
     }//
 
@@ -37,7 +37,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
 
     $scope.requestCount = function (year) {
         $scope.year = year;
-        $scope.url = "https://testmediaparkapi.azurewebsites.net/api/holiday/action=freeDaysYear&Year=" + $scope.year + "&Country=" + $scope.countr;
+        $scope.url = "https://test20210606203008.azurewebsites.net/api/holiday/action=freeDaysYear&Year=" + $scope.year + "&Country=" + $scope.countr;
         $window.location.href = $scope.url;
     }
 
@@ -46,7 +46,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
         $scope.year = year;
         $scope.day = day;
         $scope.month = month;      
-        $scope.url = "https://testmediaparkapi.azurewebsites.net/api/holiday/action=isfreeday&Day=" + $scope.day + "&Month=" + $scope.month +
+        $scope.url = "https://test20210606203008.azurewebsites.net/api/holiday/action=isfreeday&Day=" + $scope.day + "&Month=" + $scope.month +
             "&Year=" + $scope.year + "&Country=" + $scope.countr;
         $window.location.href = $scope.url;
     }
