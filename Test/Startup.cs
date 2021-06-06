@@ -2,16 +2,27 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Test.Models;
+using Newtonsoft.Json;
+
+using Microsoft.Extensions.Configuration;
 
 namespace Test
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
-            string con = "Server=(localdb)\\mssqllocaldb;Database=usersdbstore;Trusted_Connection=True;";
+           
+            string connection = Configuration.GetConnectionString("BloggingDatabase");
             // устанавливаем контекст данных
-            services.AddDbContext<UsersContext>(options => options.UseSqlServer(con));
+            services.AddDbContext<UsersContext>(options => options.UseSqlServer(connection));
 
             services.AddControllers(); // используем контроллеры без представлений
             

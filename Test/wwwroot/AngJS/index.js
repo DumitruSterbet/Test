@@ -1,6 +1,6 @@
 ﻿var app = angular.module('myApp', []);
 app.controller('myCtrl', function ($scope, $http, $window) {
-    $http.get("https://localhost:44378/api/country")
+    $http.get("https://testmediaparkapi.azurewebsites.net/api/country")
         .then(function (response) {
             $scope.myData = response.data;
         });
